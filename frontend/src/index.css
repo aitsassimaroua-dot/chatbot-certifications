@@ -1,0 +1,274 @@
+/* ==========================================
+   GLOBAL STYLES - CertiProfile AI
+   Modern Rose/Pink Theme
+   ========================================== */
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+a {
+  color: #f9a8d4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Selection */
+::selection {
+  background: rgba(236, 72, 153, 0.3);
+  color: #f1f5f9;
+}
+
+/* ==========================================
+   AUTH PAGES (Login/Register)
+   ========================================== */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 30%, #4c1d3d 70%, #0f172a 100%);
+  padding: 20px;
+}
+
+.auth-card {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(236, 72, 153, 0.15), 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.auth-card h2 {
+  color: #f1f5f9;
+  margin-bottom: 8px;
+  font-size: 1.75rem;
+}
+
+.auth-card .subtitle {
+  color: #94a3b8;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+}
+
+.auth-card input::placeholder {
+  color: #64748b;
+}
+
+.auth-card button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.auth-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+}
+
+.auth-card button:active {
+  transform: translateY(0);
+}
+
+.auth-card .auth-link {
+  margin-top: 20px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.auth-card .auth-link a {
+  color: #f9a8d4;
+  font-weight: 500;
+}
+
+.auth-card .error {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 0.85rem;
+}
+
+.auth-card .success {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 0.85rem;
+}
+
+/* Logo in auth */
+.auth-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+.text-muted {
+  color: #64748b;
+}
+
+.text-primary {
+  color: #f9a8d4;
+}
+
+.text-success {
+  color: #22c55e;
+}
+
+.text-warning {
+  color: #f59e0b;
+}
+
+.text-danger {
+  color: #ef4444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.5);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease;
+}

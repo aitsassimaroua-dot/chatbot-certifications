@@ -1,0 +1,256 @@
+/* ==========================================
+   INPUT BAR - Message Input & PDF Upload
+   Modern Rose/Pink Theme
+   ========================================== */
+
+/* Container for PDF indicator + input bar */
+.input-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* PDF Upload Indicator (shown when PDF is uploaded) */
+.pdf-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 100%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 12px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pdf-indicator .pdf-icon {
+  font-size: 1.2rem;
+}
+
+.pdf-indicator .pdf-name {
+  font-weight: 600;
+  color: #22c55e;
+  font-size: 0.9rem;
+}
+
+.pdf-indicator .pdf-words {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.pdf-indicator .pdf-remove-btn {
+  margin-left: auto;
+  background: rgba(239, 68, 68, 0.15);
+  border: none;
+  color: #ef4444;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.pdf-indicator .pdf-remove-btn:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.input-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0f172a;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(236, 72, 153, 0.15);
+  transition: all 0.25s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-bar:focus-within {
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15), 0 4px 20px rgba(236, 72, 153, 0.1);
+}
+
+/* Text Input */
+.input-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.input-bar input[type="text"]::placeholder {
+  color: #64748b;
+}
+
+/* Send Button */
+.input-bar button[type="submit"],
+.send-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #db2777 0%, #ec4899 100%);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.input-bar button[type="submit"]:hover:not(:disabled),
+.send-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+}
+
+.input-bar button:disabled,
+.send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* PDF Upload Button */
+.pdf-upload-button {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(244, 114, 182, 0.05) 100%);
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #f9a8d4;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.25s;
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.pdf-upload-button:hover {
+  background: rgba(236, 72, 153, 0.15);
+  border-color: #ec4899;
+  transform: translateY(-1px);
+}
+
+/* Clear Cache Button */
+.clear-cache-button {
+  background: rgba(239, 68, 68, 0.1);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #f87171;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.25s;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.clear-cache-button:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  transform: translateY(-1px);
+}
+
+/* Clear PDF Button */
+.clear-pdf-button {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #f59e0b;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.clear-pdf-button:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #f59e0b;
+  transform: translateY(-1px);
+}
+
+/* PDF Status Indicator */
+.pdf-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 10px;
+  color: #22c55e;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.pdf-status-icon {
+  font-size: 1rem;
+}
+
+/* Hidden file input */
+.input-bar input[type="file"] {
+  display: none;
+}
+
+/* Input Actions Group */
+.input-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .input-bar {
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .input-bar input[type="text"] {
+    order: 1;
+    width: 100%;
+    flex: none;
+  }
+
+  .input-actions {
+    order: 2;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pdf-upload-button span,
+  .clear-pdf-button span {
+    display: none;
+  }
+}

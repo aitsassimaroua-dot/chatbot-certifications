@@ -1,0 +1,266 @@
+/* ==========================================
+   DASHBOARD - Main Layout
+   Modern Rose/Pink Theme
+   ========================================== */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 260px 1fr 420px;
+  height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ==========================================
+   CENTER: Chat Section
+   ========================================== */
+
+.dashboard-chat {
+  display: flex;
+  flex-direction: column;
+  background: #1e293b;
+  border-left: 1px solid rgba(236, 72, 153, 0.15);
+  border-right: 1px solid rgba(236, 72, 153, 0.15);
+}
+
+/* Header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #db2777 0%, #ec4899 50%, #f472b6 100%);
+  border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.2);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: white;
+  padding: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-text h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.header-subtitle {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-email {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.18);
+  padding: 8px 14px;
+  border-radius: 24px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+.clear-cache-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s;
+  backdrop-filter: blur(8px);
+}
+
+.clear-cache-btn:hover {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s;
+  backdrop-filter: blur(8px);
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Messages Area */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+/* Welcome Panel */
+.welcome-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  margin: auto;
+  max-width: 520px;
+}
+
+.welcome-icon {
+  font-size: 4.5rem;
+  margin-bottom: 24px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 20px rgba(236, 72, 153, 0.3));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.welcome-panel h2 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+}
+
+.welcome-panel p {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin: 0 0 36px 0;
+}
+
+.welcome-features {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(244, 114, 182, 0.05) 100%);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  transition: all 0.25s;
+}
+
+.feature:hover {
+  border-color: rgba(236, 72, 153, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15);
+}
+
+.feature-icon {
+  font-size: 1.3rem;
+}
+
+/* Input Area */
+.chat-input-wrapper {
+  padding: 16px 24px 24px;
+  background: #1e293b;
+  border-top: 1px solid rgba(236, 72, 153, 0.1);
+}
+
+/* ==========================================
+   RIGHT: Intelligence Panel
+   ========================================== */
+
+.dashboard-intelligence {
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  overflow-y: auto;
+  border-left: 1px solid rgba(236, 72, 153, 0.08);
+}
+
+.dashboard-intelligence::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboard-intelligence::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashboard-intelligence::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+@media (max-width: 1400px) {
+  .dashboard {
+    grid-template-columns: 240px 1fr 380px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dashboard {
+    grid-template-columns: 200px 1fr 350px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-intelligence {
+    display: none;
+  }
+}

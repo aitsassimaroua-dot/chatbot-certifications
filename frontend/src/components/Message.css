@@ -1,0 +1,190 @@
+/* ==========================================
+   MESSAGE - Chat Messages
+   Modern Rose/Pink Theme
+   ========================================== */
+
+.message-row {
+  display: flex;
+  margin: 8px 0;
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message-row.assistant {
+  justify-content: flex-start;
+}
+
+/* Message Bubble */
+.message-bubble {
+  max-width: 80%;
+  padding: 14px 18px;
+  border-radius: 18px;
+  line-height: 1.65;
+  font-size: 0.95rem;
+  white-space: normal;
+  position: relative;
+}
+
+.message-bubble.user {
+  background: linear-gradient(135deg, #db2777 0%, #ec4899 100%);
+  color: white;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.35);
+}
+
+.message-bubble.assistant {
+  background: linear-gradient(135deg, #334155 0%, #3f4f63 100%);
+  color: #e2e8f0;
+  border: 1px solid rgba(236, 72, 153, 0.15);
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Message Content */
+.message-content {
+  white-space: normal;
+}
+
+.message-content p {
+  margin: 0 0 12px 0;
+}
+
+.message-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Headings in messages */
+.message-content h1,
+.message-content h2,
+.message-content h3 {
+  color: #f1f5f9;
+  margin: 16px 0 8px 0;
+  font-weight: 600;
+}
+
+.message-content h3 {
+  font-size: 1rem;
+  color: #f9a8d4;
+}
+
+/* Styled headings from markdown */
+.message-content .msg-heading-1 {
+  font-size: 1.15rem;
+  color: #f9a8d4;
+  margin: 16px 0 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.message-content .msg-heading-2 {
+  font-size: 1.05rem;
+  color: #f9a8d4;
+  margin: 14px 0 8px 0;
+}
+
+.message-content .msg-heading-3 {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin: 12px 0 6px 0;
+}
+
+/* Lists */
+.message-content ul,
+.message-content ol {
+  margin: 8px 0 8px 20px;
+  padding-left: 0;
+}
+
+.message-content li {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* Bold */
+.message-content strong {
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+/* Code blocks */
+.message-content code {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+.message-content pre {
+  background: #0f172a;
+  padding: 12px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 12px 0;
+  border: 1px solid rgba(236, 72, 153, 0.1);
+}
+
+.message-content pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Links */
+.message-content a {
+  color: #f9a8d4;
+  text-decoration: none;
+}
+
+.message-content a:hover {
+  text-decoration: underline;
+}
+
+/* Typing Indicator */
+.typing {
+  font-style: italic;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.typing::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ec4899;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* User message specific */
+.message-bubble.user .message-content strong {
+  color: white;
+}
+
+.message-bubble.user .message-content code {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}

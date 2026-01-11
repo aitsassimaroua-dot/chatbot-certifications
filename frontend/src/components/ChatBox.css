@@ -1,0 +1,134 @@
+.app-shell {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #ad1457, #7b1fa2);
+  color: white;
+}
+
+/* ZONE PRINCIPALE (droite) */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;  /* retire l'espace blanc */
+}
+
+/* TOPBAR */
+.chat-topbar {
+  padding: 5px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  height: 70px; /* plus compact */
+}
+
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.app-name {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.app-subtitle {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* MESSAGES */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+
+
+.chat-placeholder {
+  text-align: center;
+  margin-top: 80px;
+  color: #6b7280;
+}
+
+.chat-placeholder h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.chat-placeholder p {
+  font-size: 18px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+
+/* INPUT AREA */
+.chat-input-area {
+  margin-top: 12px;
+}
+/* FULL PAGE FIX */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #8a005a; /* n'importe quelle couleur si besoin */
+}
+
+/* CENTRAGE DU MESSAGE D'ACCUEIL */
+.chat-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin-top: -40px;
+}
+
+/* TITRE ROSE CLAIR */
+.placeholder-title {
+  color: #ffd7ee;
+  font-size: 34px;
+  margin: 0;
+}
+
+/* PARAGRAPHE ROSE CLAIR */
+.placeholder-text {
+  color: #ffb3d9;
+  font-size: 20px;
+  max-width: 650px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
