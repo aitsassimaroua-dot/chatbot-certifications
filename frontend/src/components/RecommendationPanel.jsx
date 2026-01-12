@@ -89,7 +89,7 @@ function RecommendationCard({ cert, rank }) {
           fontWeight: 700,
           color: '#f9a8d4'
         }}>
-          {score}%
+          Score: {score}
         </div>
       </div>
 
